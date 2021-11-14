@@ -17,5 +17,5 @@
 * cliick on **custom RPC**
 * new RPC URL = url in ur gnache workspace
 * after setting local test network import any one of the accounts from gnache into metamask
-* npm run dev
+* **npm run dev**
 * !!hurray you are all set to test ur Dapp
