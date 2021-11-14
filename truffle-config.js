@@ -1,6 +1,9 @@
+var HDWalletProvider = require("@truffle/hdwallet-provider");
+require("dotenv").config();
+
+const MNEMONIC = process.env.MNEMONIC ;
+
 module.exports = {
-  // See <http://truffleframework.com/docs/advanced/configuration>
-  // for more about customizing your Truffle configuration!
   networks: {
     development: {
       host: "127.0.0.1",
@@ -9,6 +12,19 @@ module.exports = {
     },
     develop: {
       port: 8545
+    },
+    rinkeby: {
+      // must be a thunk, otherwise truffle commands may hang in CI
+      provider: () =>
+        new HDWalletProvider({
+          mnemonic: {
+            phrase: MNEMONIC
+          },
+          providerOrUrl: `https://rinkeby.infura.io/v3/${process.env.API_KEY}`,
+        
+          
+        }),
+      network_id: '4',
     }
   }
 };
