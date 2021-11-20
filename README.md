@@ -14,7 +14,7 @@
 
 # How to test your Dapp on Gnache
 * create a metamask account [metamask](https://metamask.io/)
-* cliick on **custom RPC**
+* click on **custom RPC**
 * new RPC URL = url in ur gnache workspace
 * after setting local test network import any one of the accounts from gnache into metamask
 * **npm run dev**
